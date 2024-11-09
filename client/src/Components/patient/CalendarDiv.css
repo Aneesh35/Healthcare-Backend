@@ -1,6 +1,0 @@
-.calendarContainer {
-	display: flex;
-	justify-content: left;
-	background-color: var(--primary-bg);
-    margin-top: 20px;
-}
