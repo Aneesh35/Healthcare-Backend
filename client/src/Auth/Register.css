@@ -1,0 +1,195 @@
+:root {
+	--primary-color: #00856F;
+	--secondary-color: #F3F4F6;
+	--text-color: #333;
+	--error-color: #EF4444;
+	--button-color: #007bff; 
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+}
+.elderconnect-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+    background: linear-gradient(135deg, #00856F, #006f5c, #00a86b);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: block;
+    letter-spacing: 3px;
+}
+
+.RegWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.RegContainer {
+	display: flex;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	width: 100%;
+	max-width: 560px; 
+}
+
+.eldercare {
+	font-size: 3rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	margin-bottom: 2rem;
+	display: block;
+}
+
+.eldercare span {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+.eldercare span:hover {
+	transform: translateY(-5px);
+}
+
+.eldercare span:nth-child(n+6) {
+	color: #F3F4F6;
+}
+
+.register {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.register:hover {
+	color: #F3F4F6;
+}
+
+.girl {
+	display: none;
+}
+
+.Register {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px; /* Adjust this width to your preference */
+    margin: auto; /* Center the section */
+}
+
+.Register h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	color: var(--primary-color);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.credentials, .form-role {
+	width: 100%;
+	padding: 1rem;
+	border: 2px solid #E5E7EB;
+	border-radius: 8px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credentials:focus, .form-role:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 3px rgba(0, 133, 111, 0.1);
+}
+
+.RegisterButton {
+	margin-top: 2rem;
+	padding: 1rem;
+	background-color: var(--button-color); /* New button color */
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.RegisterButton:hover {
+	background-color: #0056b3; /* Darker blue on hover */
+	transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+	.RegContainer {
+		flex-direction: column;
+	}
+
+
+	.girl {
+		display: block;
+		text-align: center;
+	}
+
+	.girl img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.RegWrapper {
+		padding: 1rem;
+	}
+
+	.eldercare {
+		font-size: 2rem;
+	}
+}
+
+.credentials:hover, .form-role:hover {
+	transform: scale(1.02);
+}
+.error {
+	color: var(--error-color);
+	font-size: 0.875rem;
+	margin-top: 0.5rem;
+}
+
+.success {
+	color: var(--primary-color);
+	font-size: 1rem;
+	font-weight: 600;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
